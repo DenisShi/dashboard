@@ -1,0 +1,38 @@
+.sidebar {
+  width: 250px;
+  background-color: #343a40;
+  color: white;
+  transition: width 0.3s;
+
+  &.hidden {
+    width: 60px;
+  }
+
+  nav {
+    ul {
+      list-style-type: none;
+      padding: 0;
+
+      .nav-item {
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        color: white;
+        text-decoration: none;
+
+        &:hover {
+          background-color: #495057;
+        }
+
+        .material-icons {
+          font-size: 20px;
+          margin-right: 10px;
+        }
+
+        .nav-text {
+          transition: opacity 0.3s;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.dashboard-page {
+  padding: 20px;
+
+  .info-blocks {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    > * {
+      flex: 1;
+      margin-right: 20px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .dashboard-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    > * {
+      flex: 1;
+      margin-right: 20px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

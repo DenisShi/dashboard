@@ -1,0 +1,34 @@
+.email-item {
+  background-color: #ffffff;
+  border-bottom: 1px solid #dee2e6;
+  padding: 15px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #f8f9fa;
+  }
+
+  .email-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  .email-sender {
+    color: #007bff;
+  }
+
+  .email-time {
+    color: #6c757d;
+  }
+
+  .email-subject {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  .email-snippet {
+    color: #6c757d;
+  }
+}

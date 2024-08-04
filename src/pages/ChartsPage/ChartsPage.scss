@@ -1,0 +1,23 @@
+.charts-page {
+    padding: 20px;
+  
+    h2 {
+      margin-bottom: 20px;
+    }
+  
+    .chart-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 40px;
+  
+      .chart-container {
+        flex: 1;
+        margin: 0 10px;
+  
+        h3 {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+  

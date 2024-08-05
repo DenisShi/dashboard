@@ -9,15 +9,7 @@
     display: flex;
     flex: 1;
     overflow: hidden;
-    position: relative; // Добавляем позиционирование
-
-    &.m-50 {
-      top: 50px; // Устанавливаем top для main-content при наличии класса m-50
-    }
-
-    &.t-0 {
-      top: 0; // Устанавливаем top для main-content при наличии класса t-0
-    }
+    position: relative;
 
     .content {
       flex: 1;
@@ -30,13 +22,10 @@
   @media (max-width: 768px) {
     .main-content {
       flex-direction: column;
-
-      &.m-50 {
-        top: 50px; // top 50px, если sidebar видим
-      }
+      transition: top 0.5s ease-in-out;
 
       &.t-0 {
-        top: 0; // top 0, если sidebar скрыт
+        top: 50px;
       }
     }
   }

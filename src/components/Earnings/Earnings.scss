@@ -3,20 +3,74 @@
   border: 1px solid #dee2e6;
   border-radius: 8px;
   padding: 20px;
+  flex: 1;
   text-align: left;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
+  position: relative;
+  margin: 20px 0;
 
   h3 {
-    margin: 0 0 20px;
-    font-size: 18px;
+    margin: 0;
+    display: inline-block;
   }
 
-  @media (max-width: 768px) {
-    padding: 15px;
+  .earnings-total {
+    margin: 20px 0;
 
-    h3 {
-      font-size: 16px;
+    .earnings-amount {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .earnings-label {
+      color: #888;
+    }
+  }
+
+  .earnings-breakdown {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .earnings-online, .earnings-offline {
+      .earnings-amount {
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .earnings-label {
+        color: #888;
+        margin-bottom: 10px;
+      }
+
+      .range-display {
+        background: #e9ecef;
+        border-radius: 4px;
+        height: 8px;
+        position: relative;
+
+        .range-indicator {
+          background: #007bff;
+          height: 100%;
+          border-radius: 4px;
+        }
+      }
+
+      .completion-text {
+        margin: 10px 0;
+        font-weight: bold;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .earnings-breakdown {
+      flex-direction: row;
+      justify-content: space-between;
+
+      .earnings-online, .earnings-offline {
+        width: 48%;
+      }
     }
   }
 }

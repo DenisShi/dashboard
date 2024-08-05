@@ -29,3 +29,11 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .dashboard-row {
+    flex-direction: column;
+    /* width: 100%; */
+    gap: 10px;
+  }
+}

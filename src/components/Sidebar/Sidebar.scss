@@ -3,7 +3,7 @@
   background-color: #343a40;
   color: white;
   transition: width 0.3s;
-  position: relative; // Убедитесь, что позиционирование установлено
+  position: relative;
 
   &.hidden {
     width: 60px;
@@ -38,20 +38,28 @@
   }
 
   @media (max-width: 768px) {
-    position: fixed; // Убедитесь, что позиционирование установлено как fixed
-    width: 100%; // Установите ширину на 100%
-    height: auto; // Установите высоту на auto, чтобы она подстраивалась под контент
-    top: 0; // Позиционирование сверху
-    left: 0; // Позиционирование слева
-    z-index: 1000; // Убедитесь, что она выше других элементов
-    transition: top 0.3s; // Добавьте переход для анимации
+    position: fixed;
+    width: 100%;
+    height: auto;
+    left: 0;
+    z-index: 1000;
+    transition: top 0.3s;
+
+      ul {
+        display: flex;
+        justify-content: space-around;
+  
+        li {
+          width: 100%;
+        }
+      }
 
     &.visible {
-      top: 60px; // Если видима, то она будет на верху
+      top: 60px;
     }
 
     &.hidden {
-      top: -100%; // Если скрыта, она будет находиться за пределами экрана
+      top: -100%;
     }
   }
 }

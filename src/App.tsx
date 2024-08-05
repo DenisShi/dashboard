@@ -18,7 +18,7 @@ function App() {
     <Router>
       <div className="app">
         <Header toggleSidebar={toggleSidebar} />
-        <div className={`main-content ${!isSidebarVisible ? 't-0' : ''}`}>
+        <div className='main-content'>
           <Sidebar isVisible={isSidebarVisible} />
           <main className="content">
             <Routes>

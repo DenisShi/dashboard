@@ -1,6 +1,38 @@
+@import '../../variables.scss';
+
 .email-list {
   background-color: #ffffff;
-  border: 1px solid #dee2e6;
+  border: 1px solid $border-color;
   border-radius: 8px;
-  overflow: hidden;
+  padding: 20px;
+  box-shadow: 0 2px 5px $box-shadow-color;
+
+  .email-item {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid $border-color;
+
+    &:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .sender {
+      font-weight: bold;
+      color: $primary-color;
+    }
+
+    .subject {
+      color: $text-color;
+    }
+
+    .time {
+      color: $text-color;
+    }
+
+    .snippet {
+      color: $text-color;
+    }
+  }
 }

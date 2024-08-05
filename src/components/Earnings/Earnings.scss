@@ -1,75 +1,74 @@
+@import '../../variables.scss';
+
 .earnings {
   background-color: #ffffff;
-  border: 1px solid #dee2e6;
+  border: 1px solid $border-color;
   border-radius: 8px;
   padding: 20px;
   flex: 1;
   text-align: left;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px $box-shadow-color;
   position: relative;
-  margin: 20px 0;
+  margin-bottom: 20px;
 
   h3 {
-    margin: 0;
-    display: inline-block;
+    margin: 0 0 10px;
+    color: $primary-color;
   }
 
   .earnings-total {
-    margin: 20px 0;
+    margin-bottom: 20px;
+  }
 
-    .earnings-amount {
-      font-size: 24px;
-      font-weight: bold;
-    }
+  .earnings-amount {
+    font-size: 24px;
+    font-weight: bold;
+    color: $primary-color;
+  }
 
-    .earnings-label {
-      color: #888;
-    }
+  .earnings-label {
+    font-size: 14px;
+    color: $text-color;
   }
 
   .earnings-breakdown {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
 
-    .earnings-online, .earnings-offline {
+    .earnings-online,
+    .earnings-offline {
+      flex: 1;
+      margin-right: 20px;
+
       .earnings-amount {
-        font-size: 20px;
+        font-size: 18px;
         font-weight: bold;
+        color: $primary-color;
       }
 
       .earnings-label {
-        color: #888;
-        margin-bottom: 10px;
+        font-size: 14px;
+        color: $text-color;
       }
 
       .range-display {
-        background: #e9ecef;
+        background: $range-background-color;
         border-radius: 4px;
         height: 8px;
+        margin: 10px 0;
         position: relative;
 
         .range-indicator {
-          background: #007bff;
+          background: $primary-color;
           height: 100%;
           border-radius: 4px;
         }
       }
 
       .completion-text {
-        margin: 10px 0;
-        font-weight: bold;
-      }
-    }
-  }
-
-  @media (min-width: 768px) {
-    .earnings-breakdown {
-      flex-direction: row;
-      justify-content: space-between;
-
-      .earnings-online, .earnings-offline {
-        width: 48%;
+        font-size: 12px;
+        color: $text-color;
       }
     }
   }

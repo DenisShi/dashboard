@@ -1,7 +1,9 @@
+@import '../../variables.scss';
+
 .sidebar {
   width: 250px;
-  background-color: #343a40;
-  color: white;
+  background-color: $sidebar-bg-color;
+  color: $header-text-color;
   transition: width 0.3s;
   position: relative;
 
@@ -18,11 +20,11 @@
         display: flex;
         align-items: center;
         padding: 15px;
-        color: white;
+        color: $header-text-color;
         text-decoration: none;
 
         &:hover {
-          background-color: #495057;
+          background-color: darken($sidebar-bg-color, 10%);
         }
 
         .material-icons {
@@ -42,17 +44,17 @@
     width: 100%;
     height: auto;
     left: 0;
-    z-index: 1000;
+    z-index: 2;
     transition: top 0.3s;
 
-      ul {
-        display: flex;
-        justify-content: space-around;
-  
-        li {
-          width: 100%;
-        }
+    ul {
+      display: flex;
+      justify-content: space-around;
+
+      li {
+        width: 100%;
       }
+    }
 
     &.visible {
       top: 60px;

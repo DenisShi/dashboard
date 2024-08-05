@@ -2,13 +2,22 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
-  max-width: 1200px;
+  max-width: 1920px;
   margin: 0 auto;
 
   .main-content {
     display: flex;
     flex: 1;
     overflow: hidden;
+    position: relative; // Добавляем позиционирование
+
+    &.m-50 {
+      top: 50px; // Устанавливаем top для main-content при наличии класса m-50
+    }
+
+    &.t-0 {
+      top: 0; // Устанавливаем top для main-content при наличии класса t-0
+    }
 
     .content {
       flex: 1;
@@ -16,23 +25,18 @@
       background-color: #f4f4f4;
       overflow-y: auto;
     }
-
   }
 
   @media (max-width: 768px) {
     .main-content {
       flex-direction: column;
-      position: relative;
-      top: 110px;
-      transition: top 0.3s ease;
 
-      .content {
-        padding: 10px;
+      &.m-50 {
+        top: 50px; // top 50px, если sidebar видим
       }
 
       &.t-0 {
-        top: 0;
-
+        top: 0; // top 0, если sidebar скрыт
       }
     }
   }

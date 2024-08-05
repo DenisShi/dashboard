@@ -5,9 +5,12 @@ interface HeaderProps {
 }
 
 function Header({ toggleSidebar }: HeaderProps) {
+
   return (
     <header className="header">
-      <button onClick={toggleSidebar}>Toggle Sidebar</button>
+      <button onClick={toggleSidebar} className="toggle-sidebar">
+        <span className="material-icons">menu</span>
+      </button>
       <h1>Dashboard</h1>
       <input type="text" placeholder="Search..." />
     </header>
